@@ -1,7 +1,9 @@
+import Link from 'next/link'
+
 const Footer = () => {
   return (
     <footer>
-      Copyright 2021 Ninja List
+      Back to <Link href="/"><a>Home</a></Link>
     </footer>
   );
 }
