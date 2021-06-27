@@ -3,7 +3,7 @@
 body {
   background: #f2f2f2;
   color: #333;
-  font-family: "Nunito";
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 a {
   color: #333;
@@ -54,16 +54,157 @@ footer {
   text-align: center;
 }
 
-.wallpaper{
-  background-image: url('../public/vercel.svg');
+/* Start Patrick page styling */
+.PM{
+  margin: default;
+}
 
-  background-color: #cccccc;
+.bg-image {
+  /* The image used */
+  background-image: url('../public/Patrick2.jpg');
+  
+  /* Add the blur effect */
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  
+  /* Full height */
   height: 100vh;
+  width: 100vw;
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.PM *{
+  animation-timing-function: ease-in-out;
+  animation-name: PM-Spawn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 2rem;
+
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  max-width: 1400px;
+  font-size: 30px;
+  text-align: center;
+
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.1);
+}
+.grid-item {
+  text-align: center;
+  padding: 5rem 0rem;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.1);
+  border-bottom: 1rem solid seagreen;
+}
+
+.grid-item:hover{
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.3), 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.15);
+}
+
+
+.PM.gradient
+{
+  background: linear-gradient(#f2f2f2, #e6e6e6);
+}
+
+.PM div{
+  color: #000000;
+}
+
+.PM body{
+  background: #f2f2f2;
+  background-repeat: no-repeat;
+
+  /*border-bottom: 5px solid rgb(175, 125, 9);*/
+
+  /* min-width: 100vw;
+  min-height: 100vh; */
+}
+
+.PM h1{
+  text-align: center;
+  font-weight: 1;
+}
+
+.PM.profile{
+  background-image: url('../public/Patrick2.jpg');
+  /*src: url('../public/Patrick2.jpg');*/
+
+  /*background-color: #cccccc;*/
+  width: 40vh;
+  height: 40vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size:contain;
   position: relative;
+  margin: auto;
+
+  border-radius: 50%;
+  /* border-style:double;
+  border-width: 15px;
+  border-top: 0px solid;
+  border-bottom: 20px solid;
+  border-color: rgb(175, 125, 9); */
+
+  /* animation-name: example;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; */
 }
+
+.PM.mushroom{
+  transform-origin: bottom middle;
+  background-image: url('../public/Mushroom2.png');
+  display: inline-block;
+  width: 64px; height: 128px;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.PM.mushroom:nth-child(3n){
+  /* background-image: url('../public/Mushroom.png'); */
+  animation-duration: 1.6s;
+}
+.PM.mushroom:nth-child(7n){
+  /* background-image: url('../public/Mushroom.png'); */
+  animation-duration: 1.7s;
+}
+
+@keyframes PM-Spawn {
+  /* from {background-image: url('../public/Mushroom.png');}
+  to {  background-image: url('../public/Mushroom2.png');} */
+  0% {
+    transform: translate(200px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+
+@keyframes example {
+  /* from {background-image: url('../public/Mushroom.png');}
+  to {  background-image: url('../public/Mushroom2.png');} */
+  0% {
+    transform: rotate(-7deg);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: rotate(7deg);
+    transform-origin: bottom;
+  }
+}
+<<<<<<< HEAD
 
 .grid-container {
   display: grid;
@@ -81,3 +222,6 @@ footer {
   font-size: 30px;
   text-align: center;
 }
+=======
+/* End Patrick page styling */
+>>>>>>> 40033df8187ad0261d1507bd5f0e7f78df070526
