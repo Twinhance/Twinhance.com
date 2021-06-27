@@ -23,6 +23,11 @@ const About = () => {
                 Meet Patrick:
             </a>
         </Link>
+        <Link href="/thomas">
+            <a className="btn">
+                Meet Thomas:
+            </a>
+        </Link>
     </Layout>
     </>
   );
