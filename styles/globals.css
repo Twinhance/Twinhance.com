@@ -216,6 +216,31 @@ footer {
   font-family: 'Nunito', sans-serif;
 }
 
+p.TM {
+  font-size: 20px;
+}
+
+h1.TM {
+  /* "Thomas Morris" */
+  border-bottom: 1px solid rgb(220, 215, 215);
+  font-size: 42px;
+  text-align: center;
+  font-weight: 2;
+}
+
+h2.TM {
+  /* "Thomas Morris" */
+  color: rgb(56, 80, 221);
+  font-size: 32px;
+  font-weight: 2;
+}
+
+main.TM {
+  max-width: 1700px;
+  margin: auto;
+  margin-top: 10vh;
+}
+
 .TM.nav-top {
   background: rgb(255, 255, 255);
   border-bottom: 2px solid rgb(220, 215, 215);
@@ -236,26 +261,14 @@ footer {
   margin-left: 1rem;
 }
 
-.TM.nav-left {}
-
-.TM.nav-left * {
-  /* children of the nav */
-  margin-left: 1rem;
-}
-
-
-main.TM {
-  max-width: 1700px;
-  margin: auto;
-  margin-top: 10vh;
-}
-
-.TM.bubble {
-  background: white;
-  border-radius: 50%;
-  align-content: center;
+section.TM {
+  max-width: 900px;
   margin: auto;
 }
+/*
+section.TM * {
+  margin: auto;
+}*/
 
 .TM.profile-banner {
   /*
@@ -281,7 +294,14 @@ main.TM {
 }
 
 div.TM.social-media {
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+div.TM.social-media * {
+  margin-left: 2rem;
 }
 
 .TM.social-media img {
@@ -289,12 +309,8 @@ div.TM.social-media {
   height: 32px;
 }
 
-h1.TM {
-  /* "Thomas Morris" */
-  border-bottom: 2px solid rgb(220, 215, 215);
-  font-size: 42px;
-  text-align: center;
-  font-weight: 2;
+.TM.social-media img:hover {
+  cursor: pointer;
 }
 
 .TM.profile-container.a {
@@ -323,9 +339,8 @@ h1.TM {
   border-radius: 10px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.1);
 }
-.TM.project-image-container {
 
-}
+.TM.project-image-container {}
 
 .TM.project:hover {
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.3), 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.15);
