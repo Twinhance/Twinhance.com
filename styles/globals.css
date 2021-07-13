@@ -1,39 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
-/*
-body {
-  background: #f2f2f2;
-  color: #333;
+.Twinhance, .Twinhance * {
+  color: rgb(46, 46, 46);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0px;
 }
+html, body{
+  margin: 0px; padding: 0px;
+}
+.page{
+  padding-top: 50px;
+  width: 100%; height: 100%;
+  min-height: 100vh;
+  background-color: rgb(241, 241, 241);
+}
+.Twinhance a{
+  display: none;
+}
+/* START NAV LOGIC */
+.Twinhance nav{
+  top: 0px;
+  width: 100%;
+  background-color: white;
+  float: right;
+  padding: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.04);
+  position: fixed;
+  z-index: 2;
+}
+.Twinhance nav *{
+  display: block;
+  color: rgb(172, 172, 172);
+  text-align: center;
+  padding: 20px 20px;
+  font-size: 20px;
+  text-decoration: none;
+  float: right;
+}
+.Twinhance nav *:hover{
+  background-color: #ddd;
+}
+.drop-down{
+  /* This class is toggled on all elements in the nav when the hamburger is clicked. */
+  float: none !important;
+  margin: auto;
+  display: block !important;
+}
+.drop-down.hamburger{
+  /* Make the hamburger stay in the same place, and not push the other elements. */
+  position: absolute;
+  right: 0; top: 0;
+}
+@media only screen and (min-width: 800px) {
+  .Twinhance nav a{
+    /* Display items left to right on wide screens */
+    float: right;
+    display: block;
+  }
+  .hamburger{
+     /* Get rid of hamburger on wide screens */
+    display: none !important;
+  }
+}
+/* END NAV LOGIC */
 
-a {
+.Twinhance a {
   color: #333;
   text-decoration: none;
 }
-
-.content {
+.Twinhance .content {
   max-width: 960px;
   margin: 0 auto;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 30px;
+}
+.Twinhance h1{
+  margin-top: 20px;
 }
 
-nav {
-  margin: 10px auto 80px;
-  padding: 10px 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  border-bottom: 1px solid #ddd;
-}
-
-nav a {
-  margin-left: 12px;
-}
-
-nav .logo {
-  margin-right: auto;
-}
-
-footer {
+.Twinhance footer {
   display: block;
   text-align: center;
   padding: 30px 0;
@@ -41,309 +86,48 @@ footer {
   color: #777;
   border-top: 1px solid #eaeaea;
 }
-
-.not-found {
-  text-align: center;
+.banner{
+  width: 100%; height: 100%;
 }
-
-.not-found a {
-  color: #4979ff;
-  text-decoration: underline;
+.shake{
+  animation: shake 9s ease-in-out 0s infinite alternate;
 }
-
-.btn {
-  display: block;
-  width: 150px;
-  padding: 8px 0;
-  margin: 20px auto;
-  background: #4979ff;
-  border-radius: 4px;
-  color: white;
-  text-align: center;
+/* h1 {
+  text-shadow: 0px 0px 17px #000a44;
+  color: #ffffff;
+  font-size: 40px;
+} */
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }10% { transform: translate(-1px, -2px) rotate(-1deg); }20% { transform: translate(-3px, 0px) rotate(1deg); }30% { transform: translate(3px, 2px) rotate(0deg); }40% { transform: translate(1px, -1px) rotate(1deg); }50% { transform: translate(-1px, 2px) rotate(-1deg); }60% { transform: translate(-3px, 1px) rotate(0deg); }70% { transform: translate(3px, 1px) rotate(-1deg); }80% { transform: translate(-1px, -1px) rotate(1deg); }90% { transform: translate(1px, 2px) rotate(0deg); }100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 */
 
-/* Start Patrick page styling */
 
-.PM {
-  margin: default;
-}
 
-.bg-image {
-  /* The image used */
-  background-image: url('../public/Patrick2.jpg');
-  /* Add the blur effect */
-  filter: blur(0px);
-  -webkit-filter: blur(0px);
-  /* Full height */
-  height: 100vh;
-  width: 100vw;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
-.PM * {
-  animation-timing-function: ease-in-out;
-  animation-name: PM-Spawn;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-}
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 2rem;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  max-width: 1400px;
-  font-size: 30px;
-  text-align: center;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.1);
-}
 
-.grid-item {
-  text-align: center;
-  padding: 5rem 0rem;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.1);
-  border-bottom: 1rem solid seagreen;
-}
 
-.grid-item:hover {
-  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.3), 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.15);
-}
 
-.PM.gradient {
-  background: linear-gradient(#f2f2f2, #e6e6e6);
-}
 
-.PM div {
-  color: #000000;
-}
 
-.PM body {
-  background: #f2f2f2;
-  background-repeat: no-repeat;
-  /*border-bottom: 5px solid rgb(175, 125, 9);*/
-  /* min-width: 100vw;
-  min-height: 100vh; */
-}
 
-.PM h1 {
-  text-align: center;
-  font-weight: 1;
-}
 
-.PM.profile {
-  background-image: url('../public/Patrick2.jpg');
-  /*src: url('../public/Patrick2.jpg');*/
-  /*background-color: #cccccc;*/
-  width: 40vh;
-  height: 40vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-  margin: auto;
-  border-radius: 50%;
-  /* border-style:double;
-  border-width: 15px;
-  border-top: 0px solid;
-  border-bottom: 20px solid;
-  border-color: rgb(175, 125, 9); */
-  /* animation-name: example;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; */
-}
 
-.PM.mushroom {
-  transform-origin: bottom middle;
-  background-image: url('../public/Mushroom2.png');
-  display: inline-block;
-  width: 64px;
-  height: 128px;
-  animation-name: example;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-.PM.mushroom:nth-child(3n) {
-  /* background-image: url('../public/Mushroom.png'); */
-  animation-duration: 1.6s;
-}
-
-.PM.mushroom:nth-child(7n) {
-  /* background-image: url('../public/Mushroom.png'); */
-  animation-duration: 1.7s;
-}
-
-@keyframes PM-Spawn {
-  /* from {background-image: url('../public/Mushroom.png');}
-  to {  background-image: url('../public/Mushroom2.png');} */
-  0% {
-    transform: translate(200px);
-  }
-  100% {
-    transform: translate(0px);
-  }
-}
-
-@keyframes example {
-  /* from {background-image: url('../public/Mushroom.png');}
-  to {  background-image: url('../public/Mushroom2.png');} */
-  0% {
-    transform: rotate(-7deg);
-    transform-origin: bottom;
-  }
-  100% {
-    transform: rotate(7deg);
-    transform-origin: bottom;
-  }
-}
-
-/* End Patrick page styling */
-
-/* Start Thomas page styling */
-
-.TM * {
-  /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;*/
-  /*background: white;*/
-  font-family: 'Nunito', sans-serif;
-}
-
-p.TM {
-  font-size: 20px;
-}
-
-h1.TM {
-  /* "Thomas Morris" */
-  border-bottom: 1px solid rgb(220, 215, 215);
-  font-size: 42px;
-  text-align: center;
-  font-weight: 2;
-}
-
-h2.TM {
-  /* "Thomas Morris" */
-  color: rgb(56, 80, 221);
-  font-size: 32px;
-  font-weight: 2;
-}
-
-main.TM {
-  max-width: 1700px;
-  margin: auto;
-  margin-top: 10vh;
-}
-
-.TM.nav-top {
-  background: rgb(255, 255, 255);
-  border-bottom: 2px solid rgb(220, 215, 215);
-  height: 4rem;
+.column-wrapper-3{
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 2;
-  position: fixed;
-  /*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05), 0 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.05);*/
-}
-
-.TM.nav-top * {
-  /* children of the nav */
-  margin-left: 1rem;
-}
-
-section.TM {
-  max-width: 900px;
-  margin: auto;
-}
-/*
-section.TM * {
-  margin: auto;
-}*/
-
-.TM.profile-banner {
-  /*
-  width: 100%;
-  background-image: url('https://i.pinimg.com/originals/cb/56/94/cb56941995519d440681df85be384a97.gif');
-  background-repeat: no-repeat;
-  background-size: cover;
-  */
-}
-
-.TM.profile-pic {
-  background-image: url('../public/Thomas2.jpg');
-  width: 40vh;
-  height: 40vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-  /*margin: -6rem auto;*/
-  margin: auto;
-  border-radius: 50%;
-  box-shadow: 0 9px 9px 0 rgba(0, 0, 0, 0.2), 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.1);
-}
-
-div.TM.social-media {
-  height: 4rem;
-  display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+  width: 100%;
+
 }
-
-div.TM.social-media * {
-  margin-left: 2rem;
+.column-wrapper-3 > *{
+  flex-basis: 33%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  border: 1px #333 solid;
 }
-
-.TM.social-media img {
-  width: 32px;
-  height: 32px;
+.flex-grow-2{
+  flex-grow: 2 !important;
+  flex-basis: 2000px;
 }
-
-.TM.social-media img:hover {
-  cursor: pointer;
-}
-
-.TM.profile-container.a {
-  /* profile links EX: LinkedIn */
-  text-align: center;
-  align-content: center;
-  margin-left: 15px;
-  flex: auto;
-}
-
-.TM.projects-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 2rem;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  max-width: 1400px;
-  font-size: 30px;
-  text-align: center;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.1);
-}
-
-.TM.project {
-  text-align: center;
-  padding: 5rem 0rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.1);
-}
-
-.TM.project-image-container {}
-
-.TM.project:hover {
-  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.3), 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.15);
-}
-
-/* End Thomas page styling */
