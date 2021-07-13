@@ -1,12 +1,12 @@
 
 import Head from 'next/head'
-import Layout from '../comps/Layout'
+// import Layout from '../comps/Layout'
 import Link from 'next/link'
 
 const About = () => {
   return (
     <>
-    <Layout>
+    {/* <Layout>
     <Head>
         <title>Ninja List | About</title>
         <meta name="keywords" content="ninjas"/>
@@ -28,7 +28,7 @@ const About = () => {
                 Meet Thomas:
             </a>
         </Link>
-    </Layout>
+    </Layout> */}
     </>
   );
 }

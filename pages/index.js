@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout from '../comps/Layout'
-import Blog from '../comps/Blog'
-import Image from 'next/image'
+// import Layout from '../comps/Layout'
+// import Blog from '../comps/Blog'
+// import Image from 'next/image'
 import { useState } from 'react'
 
 //Props from getStaticProps()
@@ -19,15 +19,15 @@ export default function Home(props) {
     }
   }
 
-  const blogs = props.files.map(file => (
-    <li key={file.fileName}>
-      <Blog
-        name={file.fileName}
-        link={file.link}
-        key={file.fileName}
-      />
-    </li>
-  ));
+  // const blogs = props.files.map(file => (
+  //   <li key={file.fileName}>
+  //     <Blog
+  //       name={file.fileName}
+  //       link={file.link}
+  //       key={file.fileName}
+  //     />
+  //   </li>
+  // ));
 
   return (
     // <div className="Twinhance page" style={{backgroundImage:"url(Gradient-BG.svg)", backgroundRepeat:"no-repeat", backgroundSize:"100%"}}>
@@ -54,7 +54,7 @@ export default function Home(props) {
 
             <h1>Blogs:</h1>
             <ul>
-              {blogs}
+              {/* {blogs} */}
             </ul>
           </div>
       </section>
