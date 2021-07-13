@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import Link from 'next/link'
-// import Layout from '../comps/Layout'
-// import Blog from '../comps/Blog'
-// import Image from 'next/image'
+/*import Layout from '../comps/Layout'
+import Blog from '../comps/Blog'
+import Image from 'next/image'*/
 import { useState } from 'react'
 
-//Props from getStaticProps()
+/*Props from getStaticProps()*/
 export default function Home(props) {
   const [hamburgerClass, setHamburgerClass] = useState("");
 
@@ -18,19 +18,18 @@ export default function Home(props) {
       setHamburgerClass("drop-down");
     }
   }
-
-  // const blogs = props.files.map(file => (
-  //   <li key={file.fileName}>
-  //     <Blog
-  //       name={file.fileName}
-  //       link={file.link}
-  //       key={file.fileName}
-  //     />
-  //   </li>
-  // ));
-
+/*
+   const blogs = props.files.map(file => (
+     <li key={file.fileName}>
+       <Blog
+         name={file.fileName}
+         link={file.link}
+         key={file.fileName}
+      />
+     </li>
+   ));*/
   return (
-    // <div className="Twinhance page" style={{backgroundImage:"url(Gradient-BG.svg)", backgroundRepeat:"no-repeat", backgroundSize:"100%"}}>
+    /* <div className="Twinhance page" style={{backgroundImage:"url(Gradient-BG.svg)", backgroundRepeat:"no-repeat", backgroundSize:"100%"}}>*/
     <div className="Twinhance page">
       <Head>
         <title>Twinhance</title>
@@ -61,7 +60,7 @@ export default function Home(props) {
     </div>
   )
 }
-
+/*
 export async function getStaticProps() {
   var fs = require('fs');
   var files = [];
@@ -75,3 +74,4 @@ export async function getStaticProps() {
   console.log(files);
   return { props: { files: files } }
 }
+*/
