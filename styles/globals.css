@@ -38,7 +38,6 @@ html, body{
 .Twinhance nav *:hover{
   background-color: #ddd;
 }
-/*Test*/
 .drop-down{
   /* This class is toggled on all elements in the nav when the hamburger is clicked. */
   float: none !important;
