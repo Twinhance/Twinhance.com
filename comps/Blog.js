@@ -2,11 +2,13 @@ import Link from 'next/link'
 
 const Blog = (props) => {
   return (
-      <div >
-          {props.name}
-          <a href={props.link}>{props.link}</a>
-      </div>
+
+    <div className="card">
+      <h2>{props.name}</h2>
+      <a href={props.link}>{props.link} </a>
+      <p>{props.link}</p>
+    </div>
   );
 }
- 
+
 export default Blog;

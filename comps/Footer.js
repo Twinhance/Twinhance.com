@@ -3,7 +3,7 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <footer>
-      Back to <Link href="/"><a>Home</a></Link>
+      <Link href="/#home"><a>Back to Home</a></Link>
     </footer>
   );
 }

@@ -1,15 +1,25 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import { useState } from 'react'
 
 const Navbar = () => {
+  const [navExapndClass, setNavExapndClass] = useState("");
+
+  function manageBugerClick() {
+    console.log("Hello");
+    if (navExapndClass === "drop-down") {
+      setNavExapndClass("");
+    }
+    else {
+      setNavExapndClass("drop-down");
+    }
+  }
+
   return (
-    <nav>
-      <div className="logo">
-        <Image src="/Logo172x122.png" alt="site logo" width={172} height={122} />
-      </div>
-      <Link href="/"><a>Home</a></Link>
-      <Link href="/about"><a>About</a></Link>
-      <Link href="/ninjas/"><a>Games</a></Link>
+    <nav className={navExapndClass}>
+      <img src="https://PatTheNoble.github.io/Hamburger.svg" className={navExapndClass + " hamburger"} alt="Hamburger" width="23px" onClick={manageBugerClick} />
+      <Link href="/#home"><a className={navExapndClass}>Home</a></Link>
+      <Link href="/#about"><a className={navExapndClass}>About</a></Link>
+      <Link href="/#games"><a className={navExapndClass}>Games</a></Link>
     </nav>
   );
 }
