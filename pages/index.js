@@ -80,17 +80,17 @@ export default function Home(props) {
   )
 }
 
-export async function getStaticProps() {
-  var fs = require('fs');
-  var files = [];
-  var fileNames = fs.readdirSync('../twinhance/pages/blog');
-  files = fileNames.map(fileName => {
-    return {
-      fileName: fileName,
-      link: '/blog/' + fileName.substring(0, fileName.length - 3) // Substring to remove the .js at the end.
-    };
-  })
-  console.log(files);
-  return { props: { files: files } }
-}
+// export async function getStaticProps() {
+//   var fs = require('fs');
+//   var files = [];
+//   var fileNames = fs.readdirSync('../twinhance/pages/blog');
+//   files = fileNames.map(fileName => {
+//     return {
+//       fileName: fileName,
+//       link: '/blog/' + fileName.substring(0, fileName.length - 3) // Substring to remove the .js at the end.
+//     };
+//   })
+//   console.log(files);
+//   return { props: { files: files } }
+// }
 
