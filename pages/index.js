@@ -1,66 +1,85 @@
 import Head from 'next/head'
 import Link from 'next/link'
-/*import Layout from '../comps/Layout'
+import Layout from '../comps/Layout'
 import Blog from '../comps/Blog'
-import Image from 'next/image'*/
-import { useState } from 'react'
+import Image from 'next/image'
 
 /*Props from getStaticProps()*/
 export default function Home(props) {
-  const [hamburgerClass, setHamburgerClass] = useState("");
-
-  function manageBugerClick(){
-    console.log("Hello");
-    if(hamburgerClass === "drop-down"){
-      setHamburgerClass("");
-    }
-    else{
-      setHamburgerClass("drop-down");
-    }
-  }
-/*
-   const blogs = props.files.map(file => (
-     <li key={file.fileName}>
-       <Blog
-         name={file.fileName}
-         link={file.link}
-         key={file.fileName}
-      />
-     </li>
-   ));*/
+  const blogs = props.files.map(file => (
+    <Blog
+      name={file.fileName}
+      link={file.link}
+      key={file.fileName}
+    />
+  ));
   return (
     /* <div className="Twinhance page" style={{backgroundImage:"url(Gradient-BG.svg)", backgroundRepeat:"no-repeat", backgroundSize:"100%"}}>*/
-    <div className="Twinhance page">
+    <Layout>
       <Head>
         <title>Twinhance</title>
         <meta name="keywords" />
         <link rel="shortcut icon" href="/Twinhance-Logo2.svg" />
       </Head>
-      <nav>
-        <img src="https://PatTheNoble.github.io/Hamburger.svg" className={hamburgerClass + " hamburger"} alt="Hamburger" width="23px" onClick={manageBugerClick}/>
-        <a href="" className={hamburgerClass}>Home</a>
-        <a href="" className={hamburgerClass}>Home</a>
-        <a href="" className={hamburgerClass}>Home</a>
-      </nav>
-      <img className="shake" src="Twinhance-Logo2.svg" alt="Twinhance Logo" width="40%" style={{margin:"auto", display: "block"}}/>
 
-      <section className="content">
-          <div>
-            <h1>About:</h1>
-            <p>
-              We are groot. Lorem Ipsum delore Lorem Ipsum delore Lorem Ipsum delore Lorem Ipsum delore Lorem Ipsum delore Lorem Ipsum delore 
-            </p>
-
-            <h1>Blogs:</h1>
-            <ul>
-              {/* {blogs} */}
-            </ul>
+      {/* <img className="shake" src="Twinhance-Logo2.svg" alt="Twinhance Logo" width="70%" style={{ maxWidth: "550px", margin: "auto", display: "block" }} /> */}
+      <section id="home">
+        <div className="hero-image">
+          <div className="hero-text">
+            <img className="hero-logo" src="/Twinhance-Logo2.svg" />
+            Twinhance
           </div>
+        </div>
+        <div className="hero-arrow shake" onClick={() => { document.getElementById("about").scrollIntoView({ behavior: 'smooth' }); }}>
+          &#x25BC;
+        </div>
       </section>
-    </div>
+
+      <section id="about">
+        <p>
+          <strong>
+            Twinhance is a small but passionate team of game developers.
+          </strong>
+          <br /><br /><br /><br />
+          We are Thomas and Patrick, twin brothers, game developers and fellow gamers.
+          Our objective is to bring you the most enjoyable games that we can, games that are enhanced with heart, dedication and passion, we hope you will enjoy them! 
+          <br /><br /><br /><br />
+        </p>
+      </section>
+
+      <section id="games">
+        <div className="games-wrapper">
+
+          {/* <div className="game">
+            <img className="game-image" src="Screenshot (47).png" alt="Periwiggle Image" />
+          </div> */}
+
+          <div className="game">
+            <div className="iframe-container">
+              <iframe loading="lazy" frameBorder="0" allowFullScreen src="https://www.youtube.com/embed/arQa6euRnF0"></iframe>
+            </div>
+          </div>
+
+          <div className="game">
+            <div className="game-image"></div>
+          </div>
+
+        </div>
+      </section>
+
+
+      {/* <section id="blogs">
+        <div className="content">
+          <h2>Blogs:</h2>
+          <div className="info-card-container">
+            {blogs}
+          </div>
+        </div>
+      </section> */}
+    </Layout>
   )
 }
-/*
+
 export async function getStaticProps() {
   var fs = require('fs');
   var files = [];
@@ -74,4 +93,4 @@ export async function getStaticProps() {
   console.log(files);
   return { props: { files: files } }
 }
-*/
+
