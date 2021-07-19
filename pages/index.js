@@ -6,15 +6,13 @@ import Image from 'next/image'
 
 /*Props from getStaticProps()*/
 export default function Home(props) {
-
-  // const blogs = props.files.map(file => (
-  //   <Blog
-  //     name={file.fileName}
-  //     link={file.link}
-  //     key={file.fileName}
-  //   />
-  // ));
-
+  const blogs = props.files.map(file => (
+    <Blog
+      name={file.fileName}
+      link={file.link}
+      key={file.fileName}
+    />
+  ));
   return (
     /* <div className="Twinhance page" style={{backgroundImage:"url(Gradient-BG.svg)", backgroundRepeat:"no-repeat", backgroundSize:"100%"}}>*/
     <Layout>
@@ -70,29 +68,29 @@ export default function Home(props) {
       </section>
 
 
-      {/* <section id="blogs">
+      <section id="blogs">
         <div className="content">
           <h2>Blogs:</h2>
           <div className="info-card-container">
             {blogs}
           </div>
         </div>
-      </section> */}
+      </section>
     </Layout>
   )
 }
 
-// export async function getStaticProps() {
-//   var fs = require('fs');
-//   var files = [];
-//   var fileNames = fs.readdirSync('../twinhance/pages/blog');
-//   files = fileNames.map(fileName => {
-//     return {
-//       fileName: fileName,
-//       link: '/blog/' + fileName.substring(0, fileName.length - 3) // Substring to remove the .js at the end.
-//     };
-//   })
-//   console.log(files);
-//   return { props: { files: files } }
-// }
+export async function getStaticProps() {
+  var fs = require('fs');
+  var files = [];
+  var fileNames = fs.readdirSync('../twinhance/pages/blog');
+  files = fileNames.map(fileName => {
+    return {
+      fileName: fileName,
+      link: '/blog/' + fileName.substring(0, fileName.length - 3) // Substring to remove the .js at the end.
+    };
+  })
+  console.log(files);
+  return { props: { files: files } }
+}
 
