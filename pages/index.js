@@ -6,13 +6,15 @@ import Image from 'next/image'
 
 /*Props from getStaticProps()*/
 export default function Home(props) {
-  const blogs = props.files.map(file => (
-    <Blog
-      name={file.fileName}
-      link={file.link}
-      key={file.fileName}
-    />
-  ));
+
+  // const blogs = props.files.map(file => (
+  //   <Blog
+  //     name={file.fileName}
+  //     link={file.link}
+  //     key={file.fileName}
+  //   />
+  // ));
+
   return (
     /* <div className="Twinhance page" style={{backgroundImage:"url(Gradient-BG.svg)", backgroundRepeat:"no-repeat", backgroundSize:"100%"}}>*/
     <Layout>
