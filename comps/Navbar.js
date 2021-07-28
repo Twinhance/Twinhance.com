@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav className={navExapndClass}>
-      <img src="https://PatTheNoble.github.io/Hamburger.svg" className={navExapndClass + " hamburger"} alt="Hamburger" width="23px" onClick={manageBugerClick} />
+      <img src="https://PatTheNoble.github.io/images/Hamburger.svg" className={navExapndClass + " hamburger"} alt="Hamburger" width="23px" onClick={manageBugerClick} />
       <Link href="/#home"><a className={navExapndClass}>Home</a></Link>
       <Link href="/#about"><a className={navExapndClass}>About</a></Link>
       <Link href="/#games"><a className={navExapndClass}>Games</a></Link>

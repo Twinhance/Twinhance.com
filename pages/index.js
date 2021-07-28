@@ -64,6 +64,11 @@ export default function Home(props) {
 
         </div>
       </section>
+      
+      <section className="content">
+        <a className="twitter-timeline" data-width="600" data-height="1000" data-dnt="true" data-theme="light" href="https://twitter.com/twinhance?ref_src=twsrc%5Etfw">Tweets by twinhance</a> 
+        <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+      </section>
 
 
       {/* <section id="blogs">
