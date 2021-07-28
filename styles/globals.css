@@ -140,7 +140,7 @@ html, body{
   margin: 40px auto;
   background-color: var(--foreground);
   border-radius: 30px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);*/
   padding: 10px;
 }
 .Twinhance h1, .Twinhance h2{
@@ -191,7 +191,6 @@ html, body{
    top: 0;
    width: 100%;
 }
-
 .games-wrapper{
   display: flex;
   flex-direction: column;
